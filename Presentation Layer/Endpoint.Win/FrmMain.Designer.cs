@@ -163,6 +163,7 @@
             lblFoodMenu.TabIndex = 16;
             lblFoodMenu.TabStop = true;
             lblFoodMenu.Text = "لیست غذاها";
+            lblFoodMenu.LinkClicked += lblFoodMenu_LinkClicked;
             lblFoodMenu.MouseLeave += lblFoodMenu_MouseLeave;
             lblFoodMenu.MouseHover += lblFoodMenu_MouseHover;
             // 

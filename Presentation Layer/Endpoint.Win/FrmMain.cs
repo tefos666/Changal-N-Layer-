@@ -51,5 +51,12 @@ namespace Endpoint.Win
         {
             PbSelected.Image = Resources.selected_back;
         }
+
+        private void lblFoodMenu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmFood frmFood = new FrmFood();
+            frmFood.ShowDialog();
+
+        }
     }
 }

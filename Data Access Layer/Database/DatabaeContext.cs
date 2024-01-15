@@ -18,7 +18,7 @@ namespace Changal.Persistence.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ChangalDB;User ID=sa;Password=mlkbnzr;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ChangalDB;User ID=sa;Password=mlkbnzr;Integrated Security=True;TrustServerCertificate=True");
         }
 
         DbSet<Customer> Customers { get; set; }

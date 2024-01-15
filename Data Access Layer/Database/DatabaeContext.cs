@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Changal.Domain.Entities;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -19,6 +20,14 @@ namespace Changal.Persistence.Context
         {
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ChangalDB;User ID=sa;Password=mlkbnzr;Integrated Security=True;");
         }
+
+        DbSet<Customer> Customers { get; set; }
+        DbSet<Food> Foods { get; set; }
+        DbSet<Order> Orders { get; set; }
+        DbSet<User> Users { get; set; }
+        DbSet<Role> Roles { get; set; }
+
+        
 
         
     }

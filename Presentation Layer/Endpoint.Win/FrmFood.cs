@@ -24,6 +24,13 @@ namespace Endpoint.Win
         {
             var listFood = foodService.foodList();
             DgvFood.DataSource = listFood;
+            DgvFood.Columns[0].HeaderText= "نام";
+            DgvFood.Columns[1].HeaderText = "شرح";
+            DgvFood.Columns[2].HeaderText = "قیمت";
+
+            DgvFood.Columns[0].Width = 200;
+            DgvFood.Columns[1].Width = 200;
+            DgvFood.Columns[2].Width = 200;
         }
     }
 }

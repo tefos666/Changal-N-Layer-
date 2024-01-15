@@ -10,6 +10,6 @@ namespace Changal.BLL.Dto
     {
         public string FoodName { get; set; }
         public string FoodDescription { get; set; }
-        public string FoodPrice { get; set; }
+        public long FoodPrice { get; set; }
     }
 }

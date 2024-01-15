@@ -1,5 +1,6 @@
 ﻿using Changal.BLL.Dto;
-using Changal.Persistence.Context;
+using Changal.DAL.Context;
+using Changal.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,20 @@ namespace Changal.BLL.Services
 {
     public class FoodService
     {
-        DatabaeContext Context = new DatabaeContext();
+        
+        DatabaeContext database = new DatabaeContext();
 
-        //public List<FoodListDto> GetFoodList()
-        //{
-             
+        public List<FoodListDto> foodList()
+        { 
+            var FoodList = database.Foods.Select(p => new FoodListDto 
+            {
+                FoodName = p.Name,
+                FoodPrice = p.Price,
+                FoodDescription = p.Description
+            }
+            ).ToList();
 
-        //}
+            return FoodList;
+        }
     }
 }

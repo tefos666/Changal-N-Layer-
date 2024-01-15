@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Changal.Persistence.Context
+namespace Changal.DAL.Context
 {
     public class DatabaeContext : DbContext
     {
@@ -18,14 +18,15 @@ namespace Changal.Persistence.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+ 
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=ChangalDB;User ID=sa;Password=mlkbnzr;Integrated Security=True;TrustServerCertificate=True");
-        }
 
-        DbSet<Customer> Customers { get; set; }
-        DbSet<Food> Foods { get; set; }
-        DbSet<Order> Orders { get; set; }
-        DbSet<User> Users { get; set; }
-        DbSet<Role> Roles { get; set; }
+        }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Food> Foods { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         
 
